@@ -1,0 +1,56 @@
+{% extends 'registration/base_login.html' %}
+{% load i18n %}
+{% block logincontent %}
+    {% if form.errors %}
+        <p>{% translate "თქვენი მომხმარებლის სახელი და პაროლი არ ემთხვევა. გთხოვთ სცადეთ თავიდან." %}</p>
+    {% endif %}
+    {% if next %}
+        {% if user.is_authenticated %}
+            <p>{% translate "თქვენ არ გაქვთ წვდომა ამ გვერდთან, იმისათვის რომ გააგრძელოთ გთხოვთ შეხვიდეთ იმ ანგარიშზე რომელსაც აქვს წვდომა." %}</p>
+        {% else %}
+            <p>{% translate "გთხოვთ გაიარეთ ავტორიზაცია რომ ნახოთ ეს გვერდი." %}</p>
+        {% endif %}
+    {% endif %}
+
+    {% if user.is_authenticated %}
+        <form method="POST" action="{% url 'user:logout' %}">
+            {% csrf_token %}
+            <div style="margin-left: 550px; margin-top: 20px">
+                {% translate "თქვენ შესული ხართ სისტემაში როგორც" %}
+                 {{ user.username }}.<br/>
+                {% translate "გსურთ გამოსვლა?" %}
+            </div>
+            <div style="margin-left: 630px; margin-top: 20px">
+                <button class="btn border-secondary rounded-pill px-4 py-3 text-primary text-uppercase mb-4 ms-4"
+                        type="submit">{% translate "გამოსვლა" %}
+                </button>
+            </div>
+        </form>
+    {% else %}
+        <form method="POST" action="{% url 'user:login' %}">
+            {% csrf_token %}
+            <div class="col-md-12 col-lg-6 col-xl-7"
+                 style="margin-left: 560px; width: 300px; margin-bottom: 10px; background-color:beige; margin-top: 50px; border: 1px solid darkolivegreen; border-radius: 10px">
+                <div class="form-item">
+                    <div style="margin-left: 50px; margin-right: 50px;">
+                        <label class="form-label my-3">{% translate "მომხმარებლის სახელი" %}</label>
+                        <input type="text" name="username" class="form-control">
+                    </div>
+                </div>
+                <div class="form-item">
+                    <div style="margin-left: 50px; margin-right: 50px;">
+                        <label class="form-label my-3">{% translate "პაროლი" %}</label>
+                        <input type="password" name="password" class="form-control" placeholder="">
+                    </div>
+                </div>
+                <div class="form-item" style="margin-top: 30px; margin-left: 50px">
+                    <button class="btn border-secondary rounded-pill px-4 py-3 text-primary text-uppercase mb-4 ms-4"
+                            type="submit">{% translate "ავტორიზაცია" %}
+                    </button>
+                    <input type="hidden" name="next" value="{{ next }}">
+                </div>
+            </div>
+            <p style="margin-left: 560px">{% translate "გაიარე ავტორიზაცია ან" %} <a href={% url "user:register" %}>{% translate "დარეგისტრირდი" %}</a></p>
+        </form>
+    {% endif %}
+{% endblock %}

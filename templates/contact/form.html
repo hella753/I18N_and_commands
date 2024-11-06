@@ -1,0 +1,24 @@
+{% load i18n %}
+<div class="col-lg-7">
+    <form action="{% url "store:contact" %}" method="POST">
+        {% csrf_token %}
+        {% if form.errors %}
+            <p>{% translate "შეცდომაა. თავიდან სცადეთ." %}</p>
+        {% endif %}
+        <input type="text" name="sender_name" class="w-100 form-control border-0 py-3 mb-4" placeholder="{% translate "სახელი" %}">
+        <input type="email" name="sender_email" class="w-100 form-control border-0 py-3 mb-4"
+               placeholder="{% translate "ელ. ფოსტა" %}">
+        <textarea name="message" class="w-100 form-control border-0 mb-4" rows="5" cols="10"
+                  placeholder="{% translate "შეტყობინება" %}"></textarea>
+        <button class="w-100 btn form-control border-secondary py-3 bg-white text-primary "
+                type="submit">{% translate "გაგზავნე" %}
+        </button>
+        {% if messages %}
+            {% for message in messages %}
+                {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+                    <div style="display: inline-block">{{ message }}</div>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    </form>
+</div>

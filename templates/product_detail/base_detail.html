@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% comment %}
+extends from base.html changes the title and navbar's active page.
+has block content for header hero and features. After that goes the
+detailcontent which is in the shop-detail.html.
+{% endcomment %}
+
+{% block title %}
+    Product Detail
+{% endblock %}
+
+{% block nav %}
+    {% include 'reusable_components/nav.html'%}
+{% endblock nav %}
+{% block content %}
+    {% block header %}
+        <!-- Single Page Header start -->
+        <div class="container-fluid page-header py-5">
+            <h1 class="text-center text-white display-6">{% translate "პროდუქტი" %}</h1>
+            <ol class="breadcrumb justify-content-center mb-0">
+                <li class="breadcrumb-item"><a href="#">{% translate "მთავარი" %}</a></li>
+                <li class="breadcrumb-item active text-white">{% translate "პროდუქტი" %}</li>
+            </ol>
+        </div>
+        <!-- Single Page Header End -->
+
+    {% endblock header %}
+    {% block detailcontent %}
+
+    {% endblock detailcontent %}
+{% endblock content %}
+
+
+

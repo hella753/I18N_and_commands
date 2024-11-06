@@ -1,0 +1,442 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-06 20:04+0400\n"
+"PO-Revision-Date: 2024-11-06 20:05+0400\n"
+"Last-Translator: Admin Adminovichi <admin@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Translated-Using: django-rosetta 0.10.1\n"
+
+#: .\order\models.py:8 .\templates\checkout\order.html:44
+msgid "შეკვეთის დეტალები"
+msgstr "order details"
+
+#: .\order\models.py:9
+msgid "შეკვეთის თარიღი"
+msgstr "order date"
+
+#: .\order\models.py:13
+msgid "მომხმარებლის კალათა"
+msgstr "user cart"
+
+#: .\order\models.py:25
+msgid "მომხმარებელი"
+msgstr "user"
+
+#: .\order\models.py:27 .\templates\cart\cart-total.html:13
+msgid "მიტანა"
+msgstr "delivery"
+
+#: .\order\models.py:37 .\store\models.py:65
+#: .\templates\product_detail\base_detail.html:20
+#: .\templates\product_detail\base_detail.html:23
+msgid "პროდუქტი"
+msgstr "product"
+
+#: .\order\models.py:39 .\templates\cart\table_headers.html:6
+#: .\templates\checkout\checkout_cart.html:9
+msgid "რაოდენობა"
+msgstr "quantity"
+
+#: .\order\models.py:43 .\templates\cart\base_cart.html:17
+#: .\templates\cart\base_cart.html:20
+msgid "კალათა"
+msgstr "cart"
+
+#: .\store\admin.py:78
+msgid "ჯამური ფასი"
+msgstr "total price"
+
+#: .\store\models.py:9 .\store\models.py:28 .\store\models.py:85
+#: .\templates\cart\table_headers.html:4
+#: .\templates\checkout\checkout_cart.html:7 .\templates\checkout\order.html:6
+#: .\templates\contact\form.html:8 .\user\models.py:55
+msgid "სახელი"
+msgstr "name"
+
+#: .\store\models.py:15
+msgid "ზეკატეგორია"
+msgstr "parent category"
+
+#: .\store\models.py:18 .\store\models.py:49
+msgid "სლაგი"
+msgstr "slug"
+
+#: .\store\models.py:32 .\templates\cart\table_headers.html:5
+#: .\templates\checkout\checkout_cart.html:8 .\templates\shop\form.html:16
+msgid "ფასი"
+msgstr "price"
+
+#: .\store\models.py:34 .\templates\product_detail\product_info.html:63
+msgid "აღწერა"
+msgstr "description"
+
+#: .\store\models.py:35
+msgid "შეფასება"
+msgstr "rating"
+
+#: .\store\models.py:37
+msgid "ატვირთეთ ფოტოსურათი"
+msgstr "upload the image"
+
+#: .\store\models.py:40
+msgid "სურათი"
+msgstr "image"
+
+#: .\store\models.py:44 .\templates\product_detail\product_info.html:23
+msgid "კატეგორია"
+msgstr "category"
+
+#: .\store\models.py:46
+msgid "მარაგშია:"
+msgstr "in stock:"
+
+#: .\store\models.py:47 .\templates\checkout\order.html:26
+#: .\templates\product_detail\description.html:18 .\user\models.py:72
+msgid "ქვეყანა"
+msgstr "country"
+
+#: .\store\models.py:48 .\templates\product_detail\description.html:10
+msgid "წონა"
+msgstr "weight"
+
+#: .\store\models.py:50
+msgid "ტეგები"
+msgstr "tags"
+
+#: .\store\models.py:60 .\store\models.py:75
+msgid "ავტორი"
+msgstr "author"
+
+#: .\store\models.py:67 .\store\models.py:78
+msgid "თარიღი"
+msgstr "date"
+
+#: .\store\models.py:68 .\store\models.py:77
+msgid "რევიუ"
+msgstr "review"
+
+#: .\templates\404.html:13
+msgid "გვერდი ვერ მოიძებნა"
+msgstr "page not found"
+
+#: .\templates\404.html:14
+msgid ""
+"სამწუხაროდ, გვერდი რომელსაც ეძებთ არ არსებობს! შეგიძლიათ გადახვიდეთ მთავარ "
+"გვერდზე"
+msgstr ""
+"unfortunately, the page you are looking for does not exit! You can visit the"
+" home page instead."
+
+#: .\templates\404.html:15 .\templates\500.html:15
+msgid "დაბრუნდი მთავარ გვერდზე"
+msgstr "go back to the home page"
+
+#: .\templates\500.html:13
+msgid "სერვერის შეცდომა"
+msgstr "Internal Server Error"
+
+#: .\templates\500.html:14
+msgid "შეგიძლიათ გადახვიდეთ მთავარ გვერდზე"
+msgstr "you can go back to the home page"
+
+#: .\templates\base_errors.html:21 .\templates\base_errors.html:24
+msgid "შეცდომა"
+msgstr "Error"
+
+#: .\templates\base_errors.html:23 .\templates\cart\base_cart.html:19
+#: .\templates\checkout\base_checkout.html:22
+#: .\templates\contact\base_contact.html:23
+#: .\templates\product_detail\base_detail.html:22
+#: .\templates\reusable_components\nav.html:49
+#: .\templates\shop\base_shop.html:23
+msgid "მთავარი"
+msgstr "home"
+
+#: .\templates\cart\cart-total.html:5 .\templates\cart\cart-total.html:18
+#: .\templates\cart\table_headers.html:7
+#: .\templates\checkout\checkout_cart.html:10
+#: .\templates\checkout\total.html:20
+msgid "ჯამი"
+msgstr "total"
+
+#: .\templates\cart\cart-total.html:7 .\templates\checkout\total.html:7
+msgid "საბტოტალი"
+msgstr "subtotal"
+
+#: .\templates\cart\cart-total.html:11
+msgid "შიფინგი"
+msgstr "shipping"
+
+#: .\templates\cart\cart-total.html:23
+msgid "გააფორმე შეკვეთა"
+msgstr "proceed to checkout"
+
+#: .\templates\cart\table_headers.html:3
+#: .\templates\checkout\checkout_cart.html:6
+msgid "პროდუქტები"
+msgstr "products"
+
+#: .\templates\cart\table_headers.html:8
+msgid "წაშალე"
+msgstr "handle"
+
+#: .\templates\checkout\base_checkout.html:20
+#: .\templates\checkout\base_checkout.html:23
+msgid "შეკვეთა"
+msgstr "order"
+
+#: .\templates\checkout\chackout.html:9
+msgid "დეტალები"
+msgstr "billing details"
+
+#: .\templates\checkout\chackout.html:27
+msgid "შეუკვეთე"
+msgstr "place an order"
+
+#: .\templates\checkout\order.html:12 .\user\models.py:61
+msgid "გვარი"
+msgstr "last name"
+
+#: .\templates\checkout\order.html:18 .\user\models.py:70
+msgid "მისამართი"
+msgstr "address"
+
+#: .\templates\checkout\order.html:22 .\user\models.py:71
+msgid "ქალაქი"
+msgstr "city"
+
+#: .\templates\checkout\order.html:30 .\user\models.py:73
+msgid "საფოსტო კოდი"
+msgstr "zip code"
+
+#: .\templates\checkout\order.html:34 .\user\models.py:74
+msgid "ტელეფონის ნომერი"
+msgstr "phone number"
+
+#: .\templates\checkout\order.html:38 .\templates\contact\form.html:10
+#: .\templates\registration\register.html:25 .\user\models.py:38
+msgid "ელ. ფოსტა"
+msgstr "email address"
+
+#: .\templates\contact\base_contact.html:21
+#: .\templates\contact\base_contact.html:24
+#: .\templates\reusable_components\nav.html:62
+msgid "კონტაქტი"
+msgstr "contact"
+
+#: .\templates\contact\form.html:6
+msgid "შეცდომაა. თავიდან სცადეთ."
+msgstr "Something happened. Please try again."
+
+#: .\templates\contact\form.html:12
+msgid "შეტყობინება"
+msgstr "message"
+
+#: .\templates\contact\form.html:14
+msgid "გაგზავნე"
+msgstr "send"
+
+#: .\templates\contact\text.html:4
+msgid "დაგვიკავშირდი"
+msgstr "contact us"
+
+#: .\templates\contact\text.html:5
+msgid "შეავსე ფორმა და გამოგვიგზავნე შეტყობინება"
+msgstr "submit the form and send the message"
+
+#: .\templates\homepage\hero.html:8
+#, python-format
+msgid "100%% Organic ხილ-ბოსტნეული"
+msgstr "100%% Organic fruit and vegetables"
+
+#: .\templates\homepage\hero.html:9
+msgid "Organic ბოსტნეული & ხილი"
+msgstr "Organic vegetables & fruit"
+
+#: .\templates\homepage\hero.html:12
+msgid "ჩაწერე რამე"
+msgstr "type something"
+
+#: .\templates\homepage\hero.html:15 .\templates\shop\form.html:5
+msgid "მოძებნე"
+msgstr "search"
+
+#: .\templates\homepage\hero.html:26
+msgid "ხილი"
+msgstr "fruit"
+
+#: .\templates\homepage\hero.html:31
+msgid "ბოსტნეული"
+msgstr "vegetables"
+
+#: .\templates\product_detail\form-review.html:3
+msgid "დატოვე კომენტარი"
+msgstr "leave a reply"
+
+#: .\templates\product_detail\form-review.html:7
+msgid "შენი სახელი*"
+msgstr "your name*"
+
+#: .\templates\product_detail\form-review.html:12
+msgid "შენი ელ.ფოსტა*"
+msgstr "your email address*"
+
+#: .\templates\product_detail\form-review.html:18
+msgid "შენი შეფასება*"
+msgstr "your review*"
+
+#: .\templates\product_detail\form-review.html:24
+msgid "გთხოვთ შეაფასეთ:"
+msgstr "please rate:"
+
+#: .\templates\product_detail\form-review.html:35
+msgid "დაკომენტარება"
+msgstr "post a comment"
+
+#: .\templates\product_detail\product_info.html:51
+#: .\templates\shop\product.html:27
+msgid "დაამატე კალათაში"
+msgstr "Add to Cart"
+
+#: .\templates\product_detail\product_info.html:67
+msgid "შეფასებები"
+msgstr "reviews"
+
+#: .\templates\registration\base_login.html:20
+msgid "ავტორიზაცია/რეგისტრაცია"
+msgstr "authorization/registration"
+
+#: .\templates\registration\login.html:5
+msgid ""
+"თქვენი მომხმარებლის სახელი და პაროლი არ ემთხვევა. გთხოვთ სცადეთ თავიდან."
+msgstr "Your username and password didn't match. Please try again."
+
+#: .\templates\registration\login.html:9
+msgid ""
+"თქვენ არ გაქვთ წვდომა ამ გვერდთან, იმისათვის რომ გააგრძელოთ გთხოვთ შეხვიდეთ "
+"იმ ანგარიშზე რომელსაც აქვს წვდომა."
+msgstr ""
+"Your account doesn't have access to this page. To proceed, please login with"
+" an account that has access."
+
+#: .\templates\registration\login.html:11
+msgid "გთხოვთ გაიარეთ ავტორიზაცია რომ ნახოთ ეს გვერდი."
+msgstr "Please login to see this page"
+
+#: .\templates\registration\login.html:19
+msgid "თქვენ შესული ხართ სისტემაში როგორც"
+msgstr "You are logged in the system as"
+
+#: .\templates\registration\login.html:21
+msgid "გსურთ გამოსვლა?"
+msgstr "Do you want to log out?"
+
+#: .\templates\registration\login.html:25
+msgid "გამოსვლა"
+msgstr "log out"
+
+#: .\templates\registration\login.html:36
+#: .\templates\registration\register.html:19 .\user\models.py:48
+msgid "მომხმარებლის სახელი"
+msgstr "username"
+
+#: .\templates\registration\login.html:42
+#: .\templates\registration\register.html:31
+msgid "პაროლი"
+msgstr "password"
+
+#: .\templates\registration\login.html:48
+msgid "ავტორიზაცია"
+msgstr "log in"
+
+#: .\templates\registration\login.html:53
+msgid "გაიარე ავტორიზაცია ან"
+msgstr "log in or"
+
+#: .\templates\registration\login.html:53
+msgid "დარეგისტრირდი"
+msgstr "sign up"
+
+#: .\templates\registration\register.html:37
+msgid "გაიმეორე პაროლი"
+msgstr "repeat the password"
+
+#: .\templates\registration\register.html:43
+msgid "რეგისტრაცია"
+msgstr "register"
+
+#: .\templates\reusable_components\nav.html:33
+msgid "შეცვლა"
+msgstr "switch"
+
+#: .\templates\reusable_components\nav.html:51
+#: .\templates\shop\base_shop.html:21 .\templates\shop\base_shop.html:24
+msgid "მაღაზია"
+msgstr "shop"
+
+#: .\templates\reusable_components\nav.html:54
+#: .\templates\shop\category.html:5
+msgid "კატეგორიები"
+msgstr "categories"
+
+#: .\templates\shop\form.html:25
+msgid "დამატებითი"
+msgstr "additional"
+
+#: .\templates\shop\form.html:37
+msgid "სორტირება"
+msgstr "sorting"
+
+#: .\templates\shop\form.html:39
+msgid "არაფერი"
+msgstr "nothing"
+
+#: .\templates\shop\form.html:41
+msgid "ფასის მიხედვით"
+msgstr "by price"
+
+#: .\templates\shop\form.html:49
+msgid "გაფილტრე"
+msgstr "filter"
+
+#: .\templates\shop\product.html:25
+msgid "ლ"
+msgstr "GEL"
+
+#: .\templates\shop\product.html:25
+msgid "კგ"
+msgstr "Kg"
+
+#: .\templates\shop\shop.html:8
+#| msgid "მომხმარებლის კალათა"
+msgid "ახალი ხილ-ბოსტნეულის მაღაზია"
+msgstr "Fresh Fruit and Vegetables Shop"
+
+#: .\user\models.py:50
+msgid "შექმნის თარიღი"
+msgstr "date joined"
+
+#: .\user\models.py:66
+msgid "სტაფის სტატუსი"
+msgstr "is staff"
+
+#: .\user\models.py:68
+msgid "აქტიურობის სტატუსი"
+msgstr "is active"
+
+#: .\user\models.py:76
+msgid "ბოლო აქტიურობის თარიღი"
+msgstr "last active date"

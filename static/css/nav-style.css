@@ -1,0 +1,22 @@
+.for_lang_option{
+  background-color: #f2b71d;
+    color: white;
+}
+.for_lang_select{
+  background-color: #81c408;
+  border: none;
+  color: white;
+}
+
+.for_lang{
+  background-color: #fff7a8;
+  border: #81c408 1px solid;
+  border-radius: 40px;
+  color: #81c408;
+  padding: 5px;
+}
+.for_lang:hover{
+  background-color: #81c408;
+    color: white;
+
+}
