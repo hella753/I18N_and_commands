@@ -5,8 +5,15 @@ from user.models import User
 
 
 class Checkout(models.Model):
-    order_notes = models.TextField(null=True, blank=True, verbose_name=_("შეკვეთის დეტალები"))
-    order_date = models.DateField(auto_now_add=True, verbose_name=_("შეკვეთის თარიღი"))
+    order_notes = models.TextField(
+        null=True,
+        blank=True,
+        verbose_name=_("შეკვეთის დეტალები")
+    )
+    order_date = models.DateField(
+        auto_now_add=True,
+        verbose_name=_("შეკვეთის თარიღი")
+    )
     product_cart = models.ForeignKey(
         "order.Cart",
         on_delete=models.CASCADE,
@@ -42,3 +49,6 @@ class CartItem(models.Model):
         on_delete=models.CASCADE,
         verbose_name=_("კალათა")
     )
+
+    def __str__(self):
+        return f"{self.product}"

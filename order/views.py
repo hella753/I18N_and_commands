@@ -1,4 +1,6 @@
 from django.contrib import messages
+from django.http import HttpResponseRedirect
+from django.utils.translation import gettext_lazy as _
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.db.models import F
 from django.db.models.functions import Round
@@ -48,14 +50,26 @@ class AddToCartView(LoginRequiredMixin, CreateView):
         return self.request.META.get('HTTP_REFERER', '')
 
     def form_valid(self, form):
-        new_item = form.save(commit=False)
-        new_item.cart_id = self.request.user.id
-        new_item.save()
-        return super().form_valid(form)
+        product = form.cleaned_data['product']
+        quantity = form.cleaned_data['product_quantity']
+        try:
+            cart_item = CartItem.objects.get(product=product, cart__user=self.request.user)
+            if cart_item.product_quantity < product.product_quantity:
+                cart_item.product_quantity = (
+                        cart_item.product_quantity + quantity
+                )
+                cart_item.save()
+
+        except CartItem.DoesNotExist:
+            new_item = form.save(commit=False)
+            new_item.cart_id = self.request.user.id
+            new_item.save()
+
+        return HttpResponseRedirect(self.get_success_url())
 
     def form_invalid(self, form):
         messages.error(
-            self.request, 'Product of this quantity is not in stock!'
+            self.request, _('პროდუქტი ამ რაოდენობით მარაგში არ მოიძებნება!')
         )
         return redirect(self.request.META.get('HTTP_REFERER', ''))
 
