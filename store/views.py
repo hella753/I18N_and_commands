@@ -2,7 +2,7 @@ from django.conf import settings
 from django.utils.translation import gettext_lazy as _
 from django.core.cache import cache
 from django.contrib import messages
-from django.core.mail import send_mail
+from django.core.mail import send_mail, EmailMessage
 from django.db.models import Count
 from django.urls import reverse_lazy
 from django.views import View
@@ -129,15 +129,16 @@ class ContactView(SearchMixin, FormView):
         sender_name = form.cleaned_data["sender_name"]
         sender_email = form.cleaned_data["sender_email"]
         message = form.cleaned_data["message"]
-        send_mail(
-            f"New Message from {sender_name} {sender_email}",
-            message,
-            settings.EMAIL_HOST_USER,
-            ["kristigaphrindashvili@gmail.com"],
-            # Enter your Email for testing. Gmail won't create
-            # another one for me without a phone number
-            fail_silently=False,
+        mail = EmailMessage(
+            f"New Message from {sender_name}",
+            body=message,
+            from_email=sender_email,
+            to=["kristigaphrindashvili@gmail.com"],
         )
+        # from_email is not working properly so adding
+        # reply_to to be able to reply to the sender.
+        mail.reply_to = [sender_email]
+        mail.send(fail_silently=False)
         messages.success(self.request, _('შეტყობინება წარმატებით გაიგზავნა!'))
         return super().form_valid(form)
 
