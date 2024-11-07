@@ -47,7 +47,10 @@ class User(AbstractBaseUser, PermissionsMixin):
         },
         verbose_name=_("მომხმარებლის სახელი")
     )
-    date_joined = models.DateTimeField(default=timezone.now, verbose_name=_("შექმნის თარიღი"))
+    date_joined = models.DateTimeField(
+        default=timezone.now,
+        verbose_name=_("შექმნის თარიღი")
+    )
     first_name = models.CharField(
         max_length=150,
         blank=True,
@@ -65,15 +68,45 @@ class User(AbstractBaseUser, PermissionsMixin):
         help_text="Designates whether the user can log into this admin site.",
         verbose_name=_("სტაფის სტატუსი")
     )
-    is_active = models.BooleanField(default=True, verbose_name=_("აქტიურობის სტატუსი"))
+    is_active = models.BooleanField(
+        default=True,
+        verbose_name=_("აქტიურობის სტატუსი")
+    )
 
-    order_address = models.CharField(max_length=100, verbose_name=_("მისამართი"), null=True, blank=True)
-    city = models.CharField(max_length=100, null=True, blank=True, verbose_name=_("ქალაქი"))
-    country = models.CharField(max_length=100, null=True, blank=True, verbose_name=_("ქვეყანა"))
-    postcode = models.IntegerField(null=True, blank=True, verbose_name=_("საფოსტო კოდი"))
-    mobile = models.CharField(max_length=100, null=True, blank=True, verbose_name=_("ტელეფონის ნომერი"))
+    order_address = models.CharField(
+        max_length=100,
+        verbose_name=_("მისამართი"),
+        null=True,
+        blank=True
+    )
+    city = models.CharField(
+        max_length=100,
+        null=True,
+        blank=True,
+        verbose_name=_("ქალაქი")
+    )
+    country = models.CharField(
+        max_length=100,
+        null=True,
+        blank=True,
+        verbose_name=_("ქვეყანა")
+    )
+    postcode = models.IntegerField(
+        null=True,
+        blank=True,
+        verbose_name=_("საფოსტო კოდი")
+    )
+    mobile = models.CharField(
+        max_length=100,
+        null=True,
+        blank=True,
+        verbose_name=_("ტელეფონის ნომერი")
+    )
 
-    last_active_datetime = models.DateTimeField(default=timezone.now, verbose_name=_("ბოლო აქტიურობის თარიღი"))
+    last_active_datetime = models.DateTimeField(
+        default=timezone.now,
+        verbose_name=_("ბოლო აქტიურობის თარიღი")
+    )
 
     objects = UserManager()
 

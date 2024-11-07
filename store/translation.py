@@ -11,6 +11,7 @@ class ProductTranslationOptions(TranslationOptions):
 class CategoryTranslationOptions(TranslationOptions):
     fields = ('category_name',)
 
+
 @register(ProductTags)
 class CategoryTranslationOptions(TranslationOptions):
     fields = ('tag_name',)

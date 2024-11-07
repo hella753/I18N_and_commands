@@ -6,7 +6,11 @@ from django.utils.translation import gettext_lazy as _
 
 
 class Category(MPTTModel):
-    category_name = models.CharField(max_length=100, null=True, verbose_name=_("სახელი"))
+    category_name = models.CharField(
+        max_length=100,
+        null=True,
+        verbose_name=_("სახელი")
+    )
     parent = TreeForeignKey(
         "self",
         on_delete=models.CASCADE,
@@ -31,8 +35,16 @@ class Product(models.Model):
         decimal_places=2,
         verbose_name=_("ფასი")
     )
-    product_description = models.TextField(null=True, blank=True, verbose_name=_("აღწერა"))
-    product_rating = models.IntegerField(null=True, blank=True, verbose_name=_("შეფასება"))
+    product_description = models.TextField(
+        null=True,
+        blank=True,
+        verbose_name=_("აღწერა")
+    )
+    product_rating = models.IntegerField(
+        null=True,
+        blank=True,
+        verbose_name=_("შეფასება")
+    )
     product_image = VersatileImageField(
         help_text=_("ატვირთეთ ფოტოსურათი"),
         blank=True,
@@ -43,11 +55,27 @@ class Product(models.Model):
         "Category",
         verbose_name=_("კატეგორია")
     )
-    product_quantity = models.IntegerField(null=True, blank=True, verbose_name=_("მარაგშია:"))
-    country = models.CharField(default="Agro Farm", max_length=150, verbose_name=_("ქვეყანა"))
+    product_quantity = models.IntegerField(
+        null=True,
+        blank=True,
+        verbose_name=_("მარაგშია:")
+    )
+    country = models.CharField(
+        default="Agro Farm",
+        max_length=150,
+        verbose_name=_("ქვეყანა")
+    )
     weight = models.PositiveIntegerField(default=1, verbose_name=_("წონა"))
-    slug = models.SlugField(default="", unique=True, blank=True, verbose_name=_("სლაგი"))
-    tags = models.ManyToManyField("ProductTags", blank=True, verbose_name=_("ტეგები"))
+    slug = models.SlugField(
+        unique=True,
+        blank=True,
+        verbose_name=_("სლაგი")
+    )
+    tags = models.ManyToManyField(
+        "ProductTags",
+        blank=True,
+        verbose_name=_("ტეგები")
+    )
 
     def __str__(self):
         return f"{self.product_name}"

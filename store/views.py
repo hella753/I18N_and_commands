@@ -1,12 +1,11 @@
 from django.conf import settings
+from django.utils.translation import gettext_lazy as _
 from django.core.cache import cache
 from django.contrib import messages
 from django.core.mail import send_mail
 from django.db.models import Count
 from django.urls import reverse_lazy
-from django.utils.decorators import method_decorator
 from django.views import View
-from django.views.decorators.cache import cache_page
 from django.views.generic import DetailView, ListView, TemplateView, FormView
 from mixins.search_mixin import SearchMixin
 from store.forms import ContactForm
@@ -21,10 +20,6 @@ class IndexView(SearchMixin, ListView):
     context_object_name = "reviews"
 
 
-# Cannot find a way to exclude the navigation from caching when I use
-# the cache_page @method_decorator(cache_page(60 * 1), name="dispatch")
-# So I'm using low level cache api, but if there is a way to do it with
-# the cache_page let me know.
 class CategoryListingsView(ListView):
     """
     filters:
@@ -143,7 +138,7 @@ class ContactView(SearchMixin, FormView):
             # another one for me without a phone number
             fail_silently=False,
         )
-        messages.success(self.request, 'Message sent successfully!')
+        messages.success(self.request, _('შეტყობინება წარმატებით გაიგზავნა!'))
         return super().form_valid(form)
 
 

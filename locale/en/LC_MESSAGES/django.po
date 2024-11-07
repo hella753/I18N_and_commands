@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-06 20:04+0400\n"
-"PO-Revision-Date: 2024-11-06 20:05+0400\n"
+"POT-Creation-Date: 2024-11-07 13:40+0400\n"
+"PO-Revision-Date: 2024-11-07 13:43+0400\n"
 "Last-Translator: Admin Adminovichi <admin@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -19,114 +19,124 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Translated-Using: django-rosetta 0.10.1\n"
 
-#: .\order\models.py:8 .\templates\checkout\order.html:44
+#: .\order\models.py:11 .\templates\checkout\order.html:44
 msgid "შეკვეთის დეტალები"
 msgstr "order details"
 
-#: .\order\models.py:9
+#: .\order\models.py:15
 msgid "შეკვეთის თარიღი"
 msgstr "order date"
 
-#: .\order\models.py:13
+#: .\order\models.py:20
 msgid "მომხმარებლის კალათა"
 msgstr "user cart"
 
-#: .\order\models.py:25
+#: .\order\models.py:32
 msgid "მომხმარებელი"
 msgstr "user"
 
-#: .\order\models.py:27 .\templates\cart\cart-total.html:13
+#: .\order\models.py:34 .\templates\cart\cart-total.html:13
 msgid "მიტანა"
 msgstr "delivery"
 
-#: .\order\models.py:37 .\store\models.py:65
+#: .\order\models.py:44 .\store\models.py:93
 #: .\templates\product_detail\base_detail.html:20
 #: .\templates\product_detail\base_detail.html:23
 msgid "პროდუქტი"
 msgstr "product"
 
-#: .\order\models.py:39 .\templates\cart\table_headers.html:6
+#: .\order\models.py:46 .\templates\cart\table_headers.html:6
 #: .\templates\checkout\checkout_cart.html:9
 msgid "რაოდენობა"
 msgstr "quantity"
 
-#: .\order\models.py:43 .\templates\cart\base_cart.html:17
+#: .\order\models.py:50 .\templates\cart\base_cart.html:17
 #: .\templates\cart\base_cart.html:20
 msgid "კალათა"
 msgstr "cart"
+
+#: .\order\views.py:59
+#| msgid "შეავსე ფორმა და გამოგვიგზავნე შეტყობინება"
+msgid "პროდუქტი ამ რაოდენობით მარაგში არ მოიძებნება!"
+msgstr "Product of this quantity is not in stock!"
 
 #: .\store\admin.py:78
 msgid "ჯამური ფასი"
 msgstr "total price"
 
-#: .\store\models.py:9 .\store\models.py:28 .\store\models.py:85
+#: .\store\models.py:12 .\store\models.py:32 .\store\models.py:113
 #: .\templates\cart\table_headers.html:4
 #: .\templates\checkout\checkout_cart.html:7 .\templates\checkout\order.html:6
 #: .\templates\contact\form.html:8 .\user\models.py:55
 msgid "სახელი"
 msgstr "name"
 
-#: .\store\models.py:15
+#: .\store\models.py:19
 msgid "ზეკატეგორია"
 msgstr "parent category"
 
-#: .\store\models.py:18 .\store\models.py:49
+#: .\store\models.py:22 .\store\models.py:72
 msgid "სლაგი"
 msgstr "slug"
 
-#: .\store\models.py:32 .\templates\cart\table_headers.html:5
+#: .\store\models.py:36 .\templates\cart\table_headers.html:5
 #: .\templates\checkout\checkout_cart.html:8 .\templates\shop\form.html:16
 msgid "ფასი"
 msgstr "price"
 
-#: .\store\models.py:34 .\templates\product_detail\product_info.html:63
+#: .\store\models.py:41 .\templates\product_detail\product_info.html:63
 msgid "აღწერა"
 msgstr "description"
 
-#: .\store\models.py:35
+#: .\store\models.py:46
 msgid "შეფასება"
 msgstr "rating"
 
-#: .\store\models.py:37
+#: .\store\models.py:49
 msgid "ატვირთეთ ფოტოსურათი"
 msgstr "upload the image"
 
-#: .\store\models.py:40
+#: .\store\models.py:52
 msgid "სურათი"
 msgstr "image"
 
-#: .\store\models.py:44 .\templates\product_detail\product_info.html:23
+#: .\store\models.py:56 .\templates\product_detail\product_info.html:23
 msgid "კატეგორია"
 msgstr "category"
 
-#: .\store\models.py:46
+#: .\store\models.py:61
 msgid "მარაგშია:"
 msgstr "in stock:"
 
-#: .\store\models.py:47 .\templates\checkout\order.html:26
+#: .\store\models.py:66 .\templates\checkout\order.html:26
 #: .\templates\product_detail\description.html:18 .\user\models.py:72
 msgid "ქვეყანა"
 msgstr "country"
 
-#: .\store\models.py:48 .\templates\product_detail\description.html:10
+#: .\store\models.py:68 .\templates\product_detail\description.html:10
 msgid "წონა"
 msgstr "weight"
 
-#: .\store\models.py:50
+#: .\store\models.py:77
 msgid "ტეგები"
 msgstr "tags"
 
-#: .\store\models.py:60 .\store\models.py:75
+#: .\store\models.py:88 .\store\models.py:103
 msgid "ავტორი"
 msgstr "author"
 
-#: .\store\models.py:67 .\store\models.py:78
+#: .\store\models.py:95 .\store\models.py:106
 msgid "თარიღი"
 msgstr "date"
 
-#: .\store\models.py:68 .\store\models.py:77
+#: .\store\models.py:96 .\store\models.py:105
 msgid "რევიუ"
 msgstr "review"
+
+#: .\store\views.py:141
+#| msgid "შეგიძლიათ გადახვიდეთ მთავარ გვერდზე"
+msgid "შეტყობინება წარმატებით გაიგზავნა!"
+msgstr "The message has been sent!"
 
 #: .\templates\404.html:13
 msgid "გვერდი ვერ მოიძებნა"
@@ -270,7 +280,8 @@ msgstr "Organic vegetables & fruit"
 msgid "ჩაწერე რამე"
 msgstr "type something"
 
-#: .\templates\homepage\hero.html:15 .\templates\shop\form.html:5
+#: .\templates\homepage\hero.html:15
+#: .\templates\product_detail\shop-detail.html:20 .\templates\shop\form.html:5
 msgid "მოძებნე"
 msgstr "search"
 
@@ -421,7 +432,6 @@ msgid "კგ"
 msgstr "Kg"
 
 #: .\templates\shop\shop.html:8
-#| msgid "მომხმარებლის კალათა"
 msgid "ახალი ხილ-ბოსტნეულის მაღაზია"
 msgstr "Fresh Fruit and Vegetables Shop"
 
