@@ -1,8 +1,7 @@
-from django.conf import settings
 from django.utils.translation import gettext_lazy as _
 from django.core.cache import cache
 from django.contrib import messages
-from django.core.mail import send_mail, EmailMessage
+from django.core.mail import EmailMessage
 from django.db.models import Count
 from django.urls import reverse_lazy
 from django.views import View
@@ -56,22 +55,25 @@ class CategoryListingsView(ListView):
                 )
                 cache.set(cache_key, queryset, 60)
 
-        q = self.request.GET.get('q')
-        t = self.request.GET.get('t')
-        p = self.request.GET.get('p')
+        search = self.request.GET.get('q')
+        tag = self.request.GET.get('t')
+        price = self.request.GET.get('p')
         fruit_list = self.request.GET.get("fruitlist")
-        if q or t or p or fruit_list:
+        if search or tag or price or fruit_list:
             cache_filter_key = f"filtered_queryset_{queryset}"
             queryset = cache.get(cache_filter_key)
             if queryset is None:
                 queryset = cache.get("products").filter(
-                    product_name__icontains=q,
-                    product_price__lte=float(p),
+                    product_name__icontains=search
                 )
+                if price:
+                    queryset = queryset.filter(
+                        product_price__lte=float(price)
+                    )
                 if fruit_list == "2":
                     queryset = queryset.order_by("product_price")
-                if t:
-                    tags = t
+                if tag:
+                    tags = tag
                     queryset = queryset.filter(tags__in=tags)
                 queryset = queryset.prefetch_related("tags")
                 cache_filter_key = f"filtered_queryset_{queryset}"
