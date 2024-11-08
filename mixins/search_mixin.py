@@ -7,5 +7,5 @@ class SearchMixin:
     """
     def get(self, *args, **kwargs):
         if self.request.GET.get('q'):
-            return redirect(f'/category/?q={self.request.GET.get('q')}')
+            return redirect(f"/category/?q={self.request.GET.get('q')}")
         return super().get(*args, **kwargs)
