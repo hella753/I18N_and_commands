@@ -21,7 +21,8 @@ class CartItem(models.Model):
     product = models.ForeignKey(
         "store.Product",
         on_delete=models.CASCADE,
-        verbose_name=_("პროდუქტი")
+        verbose_name=_("პროდუქტი"),
+        related_name=_("cart_items")
     )
     product_quantity = models.IntegerField(verbose_name=_("რაოდენობა"))
     cart = models.ForeignKey(
